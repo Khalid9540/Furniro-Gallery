@@ -6,6 +6,7 @@ import ShopView from '../components/ShopView.vue';
 import CartView from '../components/CartView.vue';
 import Checkout from '@/components/Checkout.vue';
 import singleProduct from '@/components/singleProduct.vue';
+import favorites from '@/components/FavView.vue';
 
 
 const router = createRouter({
@@ -42,9 +43,14 @@ const router = createRouter({
       component: Checkout,
     },
     {
-      path: '/singleProduct',
+      path: '/singleProduct/:id',
       name: 'singleProduct',
       component: singleProduct,
+    },
+    {
+      path: '/favorites',
+      name: 'favorites',
+      component: favorites,
     },
   ],
 })
